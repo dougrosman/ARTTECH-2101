@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Force latest IE rendering engine or ChromeFrame if installed -->
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+        <meta charset="utf-8">
+        <title>Assignment 03</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <!-- Bootstrap styles -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/ARTTECH-2101">Art & Technology Practices - Doug's TA site! </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                
+               
+                
+                <li>
+                    <a href="/ARTTECH-2101/error-log.html">Error Log</a>
+                </li>
+                
+                <li>
+                    <a href="/ARTTECH-5010/people.html">People</a>
+                </li>
+                
+                <li>
+                    <a href="/ARTTECH-5010/syllabus.html">Syllabus</a>
+                </li>
+                
+                <li>
+                    <a href="/ARTTECH-5010/assets/css/style.css"></a>
+                </li>
+                
+                <li>
+                    <a href="/ARTTECH-5010/sitemap.xml"></a>
+                </li>
+                
+                <li>
+                    <a href="/ARTTECH-5010/robots.txt"></a>
+                </li>
+                
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </nav>
+
+
+<div class="container">
+  <div class="page-header">
+  <h1>Week -1 <small>2018.01.10 – 2018.XX.XX</h1>
+</div>
+<div>
+	<p><img src="/ARTTECH-5010/images/crosswalk_diagram.png" alt="Crosswalk Diagram" /></p>
+
+<ol>
+  <li>Build a simulation of a single traffic light with a cross-walk button (red, yellow, green for the traffic light, and perhaps white, red for the cross walk signal).  There should be one button that, in its turn, allows pedestrians to cross the street. Steps to complete:
+    <ol>
+      <li>Create a Finite State Machine (FSM) diagram for the traffic light alone.
+        <ol>
+          <li>Identify the possible <em>STATES</em> of your system.</li>
+          <li>Identify which <em>TRANSITIONS</em> between <em>STATES</em> are possible.</li>
+          <li>Identify the <em>CONDITIONS</em> under which the <em>TRANSITIONS</em> between <em>STATES</em> are allowed to occur.</li>
+          <li>Draw diagram of the FSM</li>
+        </ol>
+      </li>
+      <li>Build the circuit, write some code and test it.</li>
+      <li>Augment your FSM diagram to include the cross-walk behavior.</li>
+      <li>Build the circuit, write some code and test it.</li>
+    </ol>
+  </li>
+  <li>Key questions you are expected to be able to answer after the Traffic Light project above.
+    <ul>
+      <li>Variables
+        <ul>
+          <li>What is a variable and how do you <em>declare</em> them in C++?</li>
+          <li>What is a variable’s <em>scope</em> and what is the difference between a <em>global</em> scope and a <em>local</em> scope?</li>
+          <li>Why might you declare a variable as read-only using the <code class="highlighter-rouge">const</code> keyword?</li>
+          <li>What are the differences between <code class="highlighter-rouge">long</code>, <code class="highlighter-rouge">int</code>, <code class="highlighter-rouge">float</code> and <code class="highlighter-rouge">bool</code> and when would you choose one over another?</li>
+        </ul>
+      </li>
+      <li>Functions
+        <ul>
+          <li>What are <em>functions</em> and how do you <em>declare</em> them in C++?</li>
+          <li>Why would you use a function?</li>
+          <li>What does <code class="highlighter-rouge">void</code> mean in the context of a function declaration?</li>
+          <li>How is the <code class="highlighter-rouge">return</code> keyword used and in general what does it mean to <em>return</em> from a function?</li>
+        </ul>
+      </li>
+      <li>Program Flow
+        <ul>
+          <li>What does Arduino’s <code class="highlighter-rouge">setup()</code> function do?</li>
+          <li>What does Arduino’s <code class="highlighter-rouge">loop()</code> function do?</li>
+          <li>Why might it be important to avoid the <code class="highlighter-rouge">delay()</code> function?</li>
+        </ul>
+      </li>
+      <li>Control
+        <ul>
+          <li>What is an <code class="highlighter-rouge">if</code> / <code class="highlighter-rouge">else</code> statement?</li>
+          <li>What is an <code class="highlighter-rouge">if</code> / <code class="highlighter-rouge">else if</code> / <code class="highlighter-rouge">else</code> statement?</li>
+        </ul>
+      </li>
+      <li>Timing
+        <ul>
+          <li>What is the <code class="highlighter-rouge">millis()</code> function and how does it work?</li>
+          <li>What is the <code class="highlighter-rouge">micros()</code> function and how does it work?</li>
+        </ul>
+      </li>
+      <li>Finite State Machine
+        <ul>
+          <li>When might it be useful to use a finite state machine (FSM)?</li>
+          <li>What are <em>states</em> and how do they relate to <em>outputs</em>?</li>
+          <li>What are <em>events</em> (aka <em>state transitions</em>) and how do they relate to <em>inputs</em>?</li>
+        </ul>
+      </li>
+      <li>Input / Output
+        <ul>
+          <li>What are the steps for declaring and initializing an input pin?</li>
+          <li>What are the steps for declaring and initializing an output pin?</li>
+          <li>What are the purposes of <code class="highlighter-rouge">digitalRead()</code>, <code class="highlighter-rouge">digitalWrite()</code>, and <code class="highlighter-rouge">pinMode()</code>?</li>
+        </ul>
+      </li>
+      <li>If you are unsure of the answers any of those questions, look it up or check your notes.  If you are still are unclear post a question to the forum and we’ll discuss it.</li>
+    </ul>
+  </li>
+</ol>
+
+</div>
+
+</div>
+
+
+        <div class="navbar navbar-default">
+            <div class="container">
+                <p class="navbar-text">
+                    Experimental Media <small>ATS 5010</small>
+                </p>
+            </div>
+        </div>
+
+        <!-- jQuery -->
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
