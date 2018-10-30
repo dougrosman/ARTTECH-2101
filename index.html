@@ -1,101 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Force latest IE rendering engine or ChromeFrame if installed -->
-        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
-        <meta charset="utf-8">
-        <title>ATS 2101 - Week 0</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <!-- Bootstrap styles -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <!-- FontAwesome -->
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    </head>
-    <body>
-
-        <nav class="navbar navbar-default" role="navigation">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse">
-              <span class="sr-only">Toggle Navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/ARTTECH-2101">Art & Technology Practices - Doug's TA Site </a>
-          </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                
-               
-                
-                <li>
-                    <a href="/ARTTECH-2101/error-log.html">Error Log</a>
-                </li>
-                
-                
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </nav>
-
-
-<div class="container">
-  <div class="page-header">
-  <h1> <small>Week 0</h1>
-</div>
-<div>
-		
-	<p><img src="/ARTTECH-2101/images/GeneratedSpiral-EL-00.png" width="512" height="288" alt="A unique generated spiral" /></p>
-
-	<p> This is the first entry in my Error Log! I haven't kept one of these before, but it seems there are a million reasons to do it. All the notes I've ever kept for works-in-progress end up sprawling multiple notebooks, text files and sticky notes (of the digital <i>and</i> analog varieties). This error log won't really solve that problem–if you have to scrawl something important down, you just grab the nearest thing!</p>
-	
-	<p> But this error log is meant to be more deliberate than just a quick scrawl. More organized and curated.</p>
-	
-	<p>"Week 0" in this Error log will be for keeping track of a creative coding exercise I undertook to better prepare for TAing this course.</p>
-	
-	<h2>Project: A generative spiral system</h2>
-	
-	<p>There are a few goals with this project:</p>
-	<li>Design an interactive generative coding sketch in Processing</li>
-	<li>Allow some mechanism on an Arduino control the visuals in Processing in real-time</li>
-	<li>Output some images (still or moving) that look cool</li>
-	
-	<p>I recently picked up a book called "Generative Art: A Practical Guide Using Processing" to help me improve my coding skills through some sketches with some really neat outputs. I didn't get very far in the book before I started noodling around in my own sketch...</p>
-	
-	<p>I'm starting this error log a bit late in the process, so I'll just start where I am right now with the process.</p>
-	
-	<p>Right now, my code in Processing allows me to change the rotation and radial size change parameters before creating a series of generated spirals. I'm currently working on getting a potentiometer on my Arduino to control either of these variables, where the press of a button switches which parameter the potentiometer controls.</p>
-	
-	<li>State 1: Change how much the squares rotate with each new drawn frame.</li>
-	
-	<li>State 2: Change how much the squares' radius decreases with each new drawn frame.</li>
-	
-	<li>State 3: Change both parameters simultaneously</li>
-	
-	
-  
-
-</div>
-
-</div>
-
-
-        <div class="navbar navbar-default">
-            <div class="container">
-                <p class="navbar-text">
-                    Art & Technology Practices  <small>ATS 2101</small>
-                </p>
-            </div>
-        </div>
-
-        <!-- jQuery -->
-        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
-        <!-- Bootstrap -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    </body>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="scripts/p5.min.js"></script>
+    <script src="scripts/p5.dom.min.js"></script>
+    <!-- <script src="../addons/p5.sound.min.js"></script> -->
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+  </body>
 </html>
-
