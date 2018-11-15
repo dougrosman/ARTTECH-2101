@@ -14,7 +14,7 @@ let bx = 1;
 
 function setup() {
 
-    img = loadImage( "images/McLuhan01.png" );
+    img = loadImage( "McLuhan01.png" );
     canvas = createCanvas( windowWidth, windowHeight, WEBGL);
     r = random(255);
     g = random(255);
