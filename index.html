@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
     <style> body {padding: 0; margin: 0;} </style>
@@ -11,4 +12,37 @@
   </head>
   <body>
   </body>
+
+  <script type = "text/javascript">
+
+    // INITIALIZER
+    var pubnub = new PubNub({
+    subscribeKey: "sub-c-c6778a30-e8e8-11e8-9318-4a98695c4421",
+    publishKey: "pub-c-9234b041-af5d-4d76-93c7-6b6eeecbe941",
+    ssl: true
+    })
+
+    // LISTENERS
+    pubnub.addListener({
+    message: function(m) {
+        // handle message
+        var channelName = m.channel; // The channel for which the message belongs
+        var channelGroup = m.subscription; // The channel group or wildcard subscription match (if exists)
+        var pubTT = m.timetoken; // Publish timetoken
+        var msg = m.message; // The Payload
+        var publisher = m.publisher; //The Publisher
+    },
+    status: function(s) {
+        var affectedChannelGroups = s.affectedChannelGroups;
+        var affectedChannels = s.affectedChannels;
+        var category = s.category;
+        var operation = s.operation;
+    }
+  });
+
+    pubnub.subscribe({
+    channels: ['my_channel'],
+  });
+
+</script>
 </html>
