@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <img src="images/McLuhan02.png" width="104" height="142" alt="marshall">
-    <button>Click me</button>
-    <p title="I'm a tooltip">
-This is a paragraph.
-</p>
   </head>
   <body>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.min.js"></script>
   </body>
 
   <script type = "text/javascript">
@@ -37,9 +33,21 @@ This is a paragraph.
     }
   });
 
+  //   pubnub.subscribe({
+  //   channels: ['REALTIME'],
+  // });
+
     pubnub.subscribe({
-    channels: ['REALTIME'],
-  });
+    channel  : "RT",      // CONNECT TO THIS CHANNEL.
+    error    : function() {        // LOST CONNECTION (auto reconnects)
+        alert("Connection Lost. Will auto-reconnect when Online.")
+    },
+    callback : function(fromMax) { // RECEIVED A MESSAGE.
+        if(fromMax.value != undefined) {
+            jQuery("#jmPubNubDisplay").text(fromMax.value);
+        }
+    }
+})
 
 </script>
 </html>
