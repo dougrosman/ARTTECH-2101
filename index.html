@@ -3,10 +3,12 @@
   <head>
   </head>
   <body>
-    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.min.js"></script>
-  </body>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.js"></script>
+  
 
   <script type = "text/javascript">
+
+    <h2><span id="jmPubNubDisplay">[nothing yet]</span></h2>
 
     // INITIALIZER
     var pubnub = new PubNub({
@@ -25,29 +27,42 @@
         var msg = m.message; // The Payload
         var publisher = m.publisher; //The Publisher
     },
+    presence: function(p) {
+        // handle presence
+        var action = p.action; // Can be join, leave, state-change or timeout
+        var channelName = p.channel; // The channel for which the message belongs
+        var occupancy = p.occupancy; // No. of users connected with the channel
+        var state = p.state; // User State
+        var channelGroup = p.subscription; //  The channel group or wildcard subscription match (if exists)
+        var publishTime = p.timestamp; // Publish timetoken
+        var timetoken = p.timetoken;  // Current timetoken
+        var uuid = p.uuid; // UUIDs of users who are connected with the channel
+    },
     status: function(s) {
         var affectedChannelGroups = s.affectedChannelGroups;
         var affectedChannels = s.affectedChannels;
         var category = s.category;
         var operation = s.operation;
     }
-  });
+});
 
   //   pubnub.subscribe({
   //   channels: ['REALTIME'],
   // });
 
-    pubnub.subscribe({
-    channel  : "RT",      // CONNECT TO THIS CHANNEL.
-    error    : function() {        // LOST CONNECTION (auto reconnects)
-        alert("Connection Lost. Will auto-reconnect when Online.")
-    },
-    callback : function(fromMax) { // RECEIVED A MESSAGE.
-        if(fromMax.value != undefined) {
-            jQuery("#jmPubNubDisplay").text(fromMax.value);
-        }
-    }
-})
+  pubnub.subscribe({
+            channel  : "RT",      // CONNECT TO THIS CHANNEL.
+            error    : function() {        // LOST CONNECTION (auto reconnects)
+              alert("Connection Lost. Will auto-reconnect when Online.")
+            },
+            callback : function(fromMax) { // RECEIVED A MESSAGE.
+              if(fromMax.value != undefined) {
+                jQuery("#jmPubNubDisplay").text(fromMax.value);
+              }
+            }
+          })
+
 
 </script>
+</body>
 </html>
