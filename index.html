@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+    body, html {
+    height: 100%;
+    margin: 0;
+}
+
+img.bg {
+    /* The image used */
+    
+
+    /* Full height */
+    height: 100%;
+    width: 100%;
+
+    /* Center and scale the image nicely */
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+}
+
+  </style>
+
   </head>
   <body>
-    <h1> "at least this works" </h1>
-    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.min.js"></script>
-  
-    <h2 id="demo"></h2>
 
-    <img id="strobe" src="gifs/MM-ColorChange.gif" width="1280" height="720">
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.6.min.js"></script>
+
+    <img id="strobe" src="gifs/McLuhan02.gif" class = "bg" >
      
   <script type="text/javascript">
         
@@ -33,17 +53,22 @@
         
 
 
-        document.getElementById("demo").innerHTML = msg.value
+        //document.getElementById("demo").innerHTML = msg.value
 
         if(msg.value == 0)
         {
-          document.getElementById("strobe").src = "gifs/MM-ColorChange.gif"
+          document.getElementById("strobe").src = "gifs/McLuhan02.gif"
         }
-        else
+        else if(msg.value == 1)
         {
-          document.getElementById("strobe").src = "gifs/MM-Strobe.gif"
+          document.getElementById("strobe").src = "gifs/McLuhan02-strobe.gif"
         }
 
+        if(msg.value == 2)
+        {
+          document.getElementById("strobe").src = "images/break.jpg"
+        }
+//<h2 id="demo"></h2>
 
         
     }
